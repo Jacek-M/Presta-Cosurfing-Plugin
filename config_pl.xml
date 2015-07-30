@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>cosurfing_presta</name>
+	<displayName><![CDATA[cosurfing_presta]]></displayName>
+	<version><![CDATA[1.0.3]]></version>
+	<description><![CDATA[Dodanie JS do strony]]></description>
+	<author><![CDATA[Karol Miksztal &amp; Jacek Moczydło]]></author>
+	<tab><![CDATA[others]]></tab>
+	<confirmUninstall><![CDATA[Czy napweno chcesz usunąć?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
