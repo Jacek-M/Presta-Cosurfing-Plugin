@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<en>
+  <description><![CDATA[Add JavaScript widget code]]></description>
+  <confirmUninstall><![CDATA[Are you sure you want to uninstall?]]></confirmUninstall>
+  <title><![CDATA[Cosurfing plugin settings]]></title>
+  <label1><![CDATA[Enter Data-Token]]> </label1>
+  <button><![CDATA[Apply Changes]]></button>
+  <link><![CDATA[Don't have an account? Click here to register!]]></link>
+  <monitor><![CDATA[Check how CoSurfing works]]></monitor>
+  <footer><![CDATA[Cosurfing plugin for prestashop. &copy; All rights reserved]]></footer>
+  <oldtoken><![CDATA[Old data-token ]]></oldtoken>
+  <newtoken><![CDATA[New data-token ]]></newtoken>
+  <language><![CDATA[Language]]></language>
+</en>

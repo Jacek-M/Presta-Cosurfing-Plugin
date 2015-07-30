@@ -4,6 +4,59 @@ if (!defined('_PS_VERSION_'))
     exit;
 
 
+class LangParser
+{
+	private static $currentLang;
+
+	public static function loadLanguage()
+	{
+		$dirloc = substr($_SERVER['DOCUMENT_ROOT'], strlen($_SERVER['HOME'])).'/modules/cosurfing_presta';
+		$xml = simplexml_load_file($dirloc.'/languages/current.xml');
+		self::$currentLang = $xml->{'lang'};
+	}
+
+	public static function getCurrentLang()
+	{
+		return self::$currentLang;
+	}
+
+	public static function changeLang($param)
+	{
+		
+		$dirloc = substr($_SERVER['DOCUMENT_ROOT'], strlen($_SERVER['HOME'])).'/modules/cosurfing_presta/languages/current.xml';
+		$file = fopen($dirloc, 'w');
+
+		if($param == 'pl')
+		{
+			$temp = '<?xml version="1.0" encoding="UTF-8"?><current><lang><![CDATA[pl]]></lang></current>';
+			fwrite($file, $temp);
+		}
+			
+		else if($param == 'en')
+		{
+			$temp = '<?xml version="1.0" encoding="UTF-8"?><current><lang><![CDATA[en]]></lang></current>';
+			fwrite($file, $temp);
+		}
+		fclose($file);
+	}
+
+	public static function getTranslation($element)
+	{
+		$dirloc = substr($_SERVER['DOCUMENT_ROOT'], strlen($_SERVER['HOME'])).'/modules/cosurfing_presta';
+		if(self::$currentLang == 'pl')
+		{
+			$xml = simplexml_load_file($dirloc.'/languages/pl.xml');
+			return $xml->{$element};
+		}
+		else // eng
+		{
+			$xml = simplexml_load_file($dirloc.'/languages/en.xml');
+			return $xml->{$element};
+		}
+	}
+}
+
+
 class cosurfing_presta extends Module
 {
 	public static $done = 0;
